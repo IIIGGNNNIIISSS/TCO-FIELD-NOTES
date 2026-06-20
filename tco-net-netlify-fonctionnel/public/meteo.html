@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="fr">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#c0b16c"><title>Météo du jardin — TCo_NET</title><link rel="stylesheet" href="/assets/styles.css"></head>
+<body data-page="weather">
+  <header class="site-header"><div class="header-inner"><a class="brand" href="/"><span class="brand-mark"></span> TCo_NET</a><button class="nav-toggle secondary" aria-expanded="false" aria-controls="navigation">Menu</button><nav class="site-nav" id="navigation" aria-label="Navigation principale"><a href="/">Accueil</a><a href="/meteo.html" aria-current="page">Météo</a><a href="/mur.html">Le mur</a><a href="/residences.html">Résidences</a><a href="/sons.html">Sons</a><a href="/inventaire.html">Inventaire</a><a href="/documentation.html">Documentation</a></nav></div></header>
+  <main data-error-target>
+    <header class="page-header container"><p class="eyebrow">Station météo locale</p><h1>Données météo pour Nevers</h1><p class="intro">Mesures issues d’Open-Meteo, mises en cache ici avant le branchement des capteurs du jardin.</p></header>
+    <section class="section container"><div class="grid metrics" id="weather-metrics"></div></section>
+    <section class="section container"><div class="section-heading"><div><p class="eyebrow">72 dernières mesures</p><h2>Historique local</h2></div></div><div class="table-wrap"><table class="weather-history"><thead><tr><th>Date</th><th>Temp.</th><th>Humidité</th><th>Vent</th><th>Pression</th><th>Soleil</th><th>Pluie</th></tr></thead><tbody id="weather-history-body"></tbody></table></div></section>
+  </main>
+  <footer class="site-footer"><div class="container footer-inner"><span>TCo_NET · mesures conservées ici</span><a href="/admin.html">Administration</a></div></footer>
+  <script src="/assets/i18n.js" defer></script><script src="/assets/app.js" defer></script>
+</body></html>

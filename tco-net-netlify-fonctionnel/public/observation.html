@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#c0b16c">
+  <title>Ajouter une observation — TCo_NET</title>
+  <link rel="stylesheet" href="/assets/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="/"><span class="brand-mark"></span> TCo_NET</a>
+      <a class="button secondary" href="/inventaire.html">Voir l’inventaire</a>
+    </div>
+  </header>
+
+  <main class="observer-shell">
+    <section id="observer-login" class="observer-panel">
+      <p class="eyebrow">Carnet de terrain</p>
+      <h1>Ajouter une observation</h1>
+      <p>Entrez le code partagé par Terrains Communs. Il restera mémorisé sur ce téléphone.</p>
+      <form id="observer-login-form" class="observer-form">
+        <div class="field">
+          <label for="observer-password">Code d’accès</label>
+          <input id="observer-password" name="password" type="password" inputmode="numeric" autocomplete="current-password" required>
+        </div>
+        <button class="observer-submit" type="submit">Continuer</button>
+        <p id="observer-login-notice" hidden></p>
+      </form>
+    </section>
+
+    <section id="observer-form-panel" class="observer-panel hidden">
+      <p class="eyebrow">Nouvelle entrée</p>
+      <h1>Qu’avez-vous observé ?</h1>
+      <form id="observer-form" class="observer-form" enctype="multipart/form-data">
+        <fieldset class="field">
+          <legend>Choisissez une catégorie</legend>
+          <div class="observer-types">
+            <div class="observer-type" data-type="oiseau"><input id="type-oiseau" name="type" value="oiseau" type="radio" required><label for="type-oiseau">Oiseau</label></div>
+            <div class="observer-type" data-type="plante"><input id="type-plante" name="type" value="plante" type="radio"><label for="type-plante">Plante</label></div>
+            <div class="observer-type" data-type="insecte"><input id="type-insecte" name="type" value="insecte" type="radio"><label for="type-insecte">Insecte</label></div>
+            <div class="observer-type" data-type="mammifère"><input id="type-mammifere" name="type" value="mammifère" type="radio"><label for="type-mammifere">Mammifère</label></div>
+            <div class="observer-type" data-type="champignon"><input id="type-champignon" name="type" value="champignon" type="radio"><label for="type-champignon">Champignon</label></div>
+            <div class="observer-type" data-type="autre"><input id="type-autre" name="type" value="autre" type="radio"><label for="type-autre">Autre</label></div>
+          </div>
+        </fieldset>
+
+        <div class="field">
+          <label for="common-name">Nom observé *</label>
+          <input id="common-name" name="common_name" required autocomplete="off" placeholder="Ex. Mésange bleue">
+        </div>
+        <div class="field">
+          <label for="latin-name">Nom latin — facultatif</label>
+          <input id="latin-name" name="latin_name" autocomplete="off">
+        </div>
+        <div class="form-grid">
+          <div class="field">
+            <label for="observed-at">Date</label>
+            <input id="observed-at" name="observed_at" type="date" required>
+          </div>
+          <div class="field">
+            <label for="observation-zone">Lieu dans le jardin</label>
+            <input id="observation-zone" name="zone" placeholder="Ex. Haie nord">
+          </div>
+        </div>
+        <div class="field">
+          <label for="observation-image">Photo — facultative</label>
+          <input id="observation-image" name="image" type="file" accept="image/*" capture="environment">
+        </div>
+        <div class="field">
+          <label for="observation-description">Note — facultative</label>
+          <textarea id="observation-description" name="description" placeholder="Nombre d’individus, comportement, météo…"></textarea>
+        </div>
+        <button class="observer-submit" type="submit">Enregistrer l’observation</button>
+        <p id="observer-form-notice" hidden></p>
+      </form>
+      <button id="observer-logout" class="secondary" type="button">Changer d’utilisateur</button>
+    </section>
+  </main>
+
+  <script src="/assets/i18n.js" defer></script>
+  <script src="/assets/observation.js" defer></script>
+</body>
+</html>
